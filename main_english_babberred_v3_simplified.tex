@@ -1,0 +1,415 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% Custom colors
+\definecolor{RurDynamixGreen}{RGB}{76, 175, 80}
+\definecolor{RurDynamixBlue}{RGB}{33, 150, 243}
+\definecolor{DarkGray}{RGB}{64, 64, 64}
+
+\setbeamercolor{primary}{fg=white,bg=RurDynamixGreen}
+\setbeamercolor{secondary}{fg=white,bg=RurDynamixBlue}
+\setbeamertemplate{frametitle}{
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1cm,rightskip=1cm,wd=\paperwidth,ht=0.8cm,dp=0.4cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}
+}
+
+% Title Page Setup
+\title{\tiny{Rural Territories in Transition: Morocco and the Global South}}
+\author{Said Moukrim}
+\institute{UM5-FSR Morocco}
+\date{November 28, 2026}
+
+\begin{document}
+
+\begin{frame}
+
+\begin{columns}[T]
+  \column{0.5\textwidth}
+  \includegraphics[width=\textwidth]{images/rur_dyn.png}
+
+  \column{0.25\textwidth}
+  \includegraphics[width=\textwidth]{images/FSR logo.png}
+\end{columns}
+
+\vspace{1cm}
+
+\begin{center}
+\Large {Hydraulic Innovation and Rural Transitions:}\\
+\vspace{0.8cm}
+\large{Artificial Basins Dynamics in Bab Berred}\\
+Central Rif (Morocco)\\
+\vspace{1.5cm}
+\Large{Said Moukrim}
+\end{center}
+
+\end{frame}
+
+% ==================== INTRODUCTION ====================
+
+% Slide 2: Problem
+\begin{frame}
+\frametitle{Problem: Water Scarcity in Mountains}
+
+\begin{itemize}
+  \item Precipitation is \textbf{declining} in Bab Berred
+  \item \textbf{2023}: Record low = 300 mm (very dry)
+  \item Mountains: Water is essential for agriculture
+  \item Farmers need solutions
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Farmers' response:}
+\begin{itemize}
+  \item Build artificial water basins
+  \item Store water from rainy season
+  \item Use water in dry season
+\end{itemize}
+
+\end{frame}
+
+% Slide 3: Why Cannabis? (Market, not law)
+\begin{frame}
+\frametitle{Why Cannabis? Market Demand, Not Law}
+
+\textbf{Important correction:}
+\begin{itemize}
+  \item \textbf{NOT}: Legalization in 2021 caused the expansion
+  \item \textbf{YES}: International market demand caused the expansion
+  \item Law 13-21 only allowed official channels
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Why farmers choose hybrid cannabis:}
+\begin{itemize}
+  \item Old variety (kif): 15 kg/hectare
+  \item New hybrids: 70 kg/hectare
+  \item \textbf{4-5× more productive!}
+  \item Farmers earn more money
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{The cost}: Hybrids need much more water $\Rightarrow$ basins
+
+\end{frame}
+
+% Slide 4: Study Area
+\begin{frame}
+\frametitle{Study Area: Bab Berred}
+
+\textbf{Where is it?}
+\begin{itemize}
+  \item Chefchaouen Province, Morocco
+  \item Mountain region (Rif Mountains)
+  \item Population: 24,742 people
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Terrain:}
+\begin{itemize}
+  \item Very steep: 80\% average slope
+  \item High altitude: 650-2,100 meters
+  \item Total area: 172.24 km²
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{center}
+  \vspace{1.5cm}
+  \includegraphics[width=0.7\textwidth]{images/Figure1_Location.png}
+  \small{\textit{Figure 1: Location of Bab Berred}}
+\end{center}
+
+\end{frame}
+
+% ==================== METHODS ====================
+
+% Slide 5: Methods
+\begin{frame}
+\frametitle{How We Did This Study}
+
+\textbf{Data sources:}
+\begin{itemize}
+  \item \textbf{Satellite images}: Landsat (1998-2025) = see vegetation
+  \item \textbf{Google Earth Pro}: See basins (manual counting)
+  \item \textbf{Precipitation data}: From satellites (1985-2025)
+  \item \textbf{Land-use maps}: Classify vegetation types
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{What we measured:}
+\begin{itemize}
+  \item How many basins? When built?
+  \item Where are they located?
+  \item How big are they?
+  \item How is vegetation changing? (NDVI)
+  \item How is precipitation changing?
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Tools:}
+\begin{itemize}
+  \item QGIS (mapping software)
+  \item Google Earth Engine (satellite analysis)
+  \item RStudio (statistics)
+\end{itemize}
+
+\end{frame}
+
+% ==================== RESULTS ====================
+
+% Slide 6: Basin Numbers
+\begin{frame}
+\frametitle{Result 1: Basin Explosion}
+
+\textbf{Basin count:}
+\begin{itemize}
+  \item 2010: $\approx$ 28 basins
+  \item 2025: 2,044 basins
+  \item Growth: 73$\times$ more basins in 15 years!
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Storage capacity:}
+\begin{itemize}
+  \item 2010: 50,000 m³ total water stored
+  \item 2025: 4.3 million m³ total
+  \item Increase: 85$\times$ more water!
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{center}
+  \vspace{1.2cm}
+  \includegraphics[width=0.75\textwidth]{images/Figure2_BasinGrowth.png}
+  \small{\textit{Figure 2: Number of basins per year (2010-2025)}}
+\end{center}
+
+\end{frame}
+
+% Slide 7: Where Are Basins?
+\begin{frame}
+\frametitle{Result 2: Where Are Basins Located?}
+
+\textbf{Altitude preference:}
+\begin{itemize}
+  \item Concentration: 800-1,500 m
+  \item Not too high, not too low
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{Slope preference:}
+\begin{itemize}
+  \item 71\% on slopes 5-15\%
+  \item Avoid very steep slopes (too expensive)
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{Land-use:}
+\begin{itemize}
+  \item 78\% in cannabis fields
+  \item 18\% in grasslands
+  \item 3\% in natural forest
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{center}
+  \vspace{0.8cm}
+  \includegraphics[width=0.75\textwidth]{images/Figure3_SpatialDistribution.png}
+  \small{\textit{Figure 3: Where basins are located (maps)}}
+\end{center}
+
+\end{frame}
+
+% Slide 8: Vegetation Improvement?
+\begin{frame}
+\frametitle{Result 3: Vegetation Gets Greener (NDVI)}
+
+\textbf{What is NDVI?}
+\begin{itemize}
+  \item Satellite measurement of vegetation (greenness)
+  \item 0 = bare soil, 1 = dense forest
+  \item Higher = more green
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{What we see:}
+\begin{itemize}
+  \item 1998-2012: Slight increase
+  \item 2012-2025: Big increase in greenness
+  \item Peak greenness: May-August (cannabis growing season)
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{center}
+  \vspace{0.8cm}
+  \includegraphics[width=0.75\textwidth]{images/Figure4_NDVI.png}
+  \small{\textit{Figure 4: NDVI over time (green = higher values after 2012)}}
+\end{center}
+
+\end{frame}
+
+% Slide 9: But Precipitation Declines!
+\begin{frame}
+\frametitle{Result 4: Precipitation DECLINES}
+
+\textbf{The problem:}
+\begin{itemize}
+  \item Overall trend: Precipitation is declining
+  \item Statistical test: tau = -0.1376 (significant decline)
+  \item Year-to-year: Big ups and downs
+  \item 2023: Record low ($\approx$ 300 mm)
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{center}
+  \vspace{1.2cm}
+  \includegraphics[width=0.75\textwidth]{images/Figure5_Precipitation.png}
+  \small{\textit{Figure 5: Annual precipitation (declining trend visible)}}
+\end{center}
+
+\vspace{0.3cm}
+
+\small{\textit{The paradox: Vegetation greens BUT rain decreases!}}
+
+\end{frame}
+
+% ==================== DISCUSSION ====================
+
+% Slide 10: The Paradox Explained
+\begin{frame}
+\frametitle{The Paradox: Why NDVI Up When Rain Down?}
+
+\textbf{Answer: Irrigation!}
+\begin{itemize}
+  \item Basins store water from rainy seasons
+  \item Water used for irrigation in dry season
+  \item Cannabis gets watered $\Rightarrow$ green vegetation
+  \item Satellites see green $\Rightarrow$ high NDVI
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{But is this good?}
+\begin{itemize}
+  \item NDVI high = lots of green vegetation
+  \item BUT: Only cannabis (monoculture), not forest
+  \item Natural areas (forest, grassland) = \textbf{decreased}
+  \item High NDVI masks land conversion!
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Bottom line:}
+\begin{itemize}
+  \item More vegetation ≠ healthier ecosystem
+  \item Just more farming, not more nature
+\end{itemize}
+
+\end{frame}
+
+% Slide 11: The Real Cost
+\begin{frame}
+\frametitle{The Cost: Aquifer Depletion}
+
+\textbf{Critical problem:}
+\begin{itemize}
+  \item Farmers extract water faster than rain refills aquifer
+  \item Groundwater level = \textbf{declining}
+  \item Long-term: Water will run out
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Other impacts:}
+\begin{itemize}
+  \item Natural habitat fragmented (by basins)
+  \item Forest converted to cannabis fields
+  \item Endemic species at risk
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{The paradox of adaptation:}
+\begin{itemize}
+  \item Short-term: Basins solve water problem
+  \item Long-term: Basins create new problem (aquifer depletion)
+  \item Rational for farmer today $\neq$ sustainable for region tomorrow
+\end{itemize}
+
+\end{frame}
+
+% ==================== CONCLUSION ====================
+
+% Slide 12: Conclusion
+\begin{frame}
+\frametitle{Conclusion}
+
+\textbf{What we found:}
+\begin{itemize}
+  \item Basins increased 73× in 15 years
+  \item Vegetation looks greener (but it's just crops)
+  \item Rain is declining (long-term trend)
+  \item Aquifers are depleting
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Why it matters:}
+\begin{itemize}
+  \item Same problem in many Mediterranean countries
+  \item Same problem in semi-arid regions worldwide
+  \item Need better water management
+  \item Infrastructure alone is not enough
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{What needs to happen:}
+\begin{itemize}
+  \item Sustainable water limits
+  \item Protect remaining natural areas
+  \item Diversify farming (not just cannabis)
+  \item Work together (not individual farmers separately)
+\end{itemize}
+
+\end{frame}
+
+% Final Slide
+\begin{frame}[plain]
+\begin{center}
+  \vfill
+  {\Huge \textbf{Thank you}}
+  \\[1cm]
+  {\Large Questions?}
+  \\[2cm]
+  \small{
+    Said Moukrim, Ousmane Samba MAÏGA, et al. \\
+    Mohammed-V University in Rabat \\
+    Faculty of Sciences
+  }
+  \vfill
+\end{center}
+\end{frame}
+
+\end{document}
