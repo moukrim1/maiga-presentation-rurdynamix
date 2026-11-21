@@ -1,0 +1,425 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% Custom colors
+\definecolor{RurDynamixGreen}{RGB}{76, 175, 80}
+\definecolor{RurDynamixBlue}{RGB}{33, 150, 243}
+\definecolor{DarkGray}{RGB}{64, 64, 64}
+
+\setbeamercolor{primary}{fg=white,bg=RurDynamixGreen}
+\setbeamercolor{secondary}{fg=white,bg=RurDynamixBlue}
+\setbeamertemplate{frametitle}{
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1cm,rightskip=1cm,wd=\paperwidth,ht=0.8cm,dp=0.4cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}
+}
+
+% Title Page Setup
+\title{\tiny{Rural Territories in Transition: Morocco and the Global South}}
+\author{Said Moukrim}
+\institute{UM5-FSR Morocco}
+\date{November 28, 2026}
+
+\begin{document}
+
+\begin{frame}
+
+\begin{columns}[T]
+  \column{0.5\textwidth}
+  \includegraphics[width=\textwidth]{images/rur_dyn.png}
+
+  \column{0.25\textwidth}
+  \includegraphics[width=\textwidth]{images/FSR logo.png}
+\end{columns}
+
+\vspace{1cm}
+
+\begin{center}
+\Large {Hydraulic Innovation and Rural Transitions:}\\
+\vspace{1cm}
+\large{Spatio-Temporal Analysis of Artificial Basins Dynamics in Bab Berred}\\
+Central Rif (Morocco)\\
+\vspace{1.5cm}
+\Large{Said Moukrim}
+\end{center}
+
+\end{frame}
+
+% Slide 2: Problem Statement
+\begin{frame}
+\frametitle{The Challenge: Water Scarcity in Mountain Agriculture}
+\begin{itemize}
+  \item \textbf{Mediterranean mountain climate}: Irregular precipitation, seasonal drought stress
+  \item \textbf{Regional trend}: Declining precipitation (Mann-Kendall test, tau = -0.1376, p < 0.05)
+  \item \textbf{2023 record}: Lowest precipitation on record (\textasciitilde 300 mm)
+  \item \textbf{Agricultural pressure}: Cannabis varieties require 4-5× more water than traditional kif
+  \item \textbf{Farmer response}: Massive artificial basin construction (2010-2025)
+\end{itemize}
+\end{frame}
+
+% Slide 3: Why Cannabis Transformation?
+\begin{frame}
+\frametitle{The Driver: Economic Opportunity, Not Legalization}
+\textbf{Key distinction:}
+\begin{itemize}
+  \item \textbf{Legalization (2021)}: Law 13-21 enabled official channels
+  \item \textbf{BUT} actual driver = international market demand for high-quality cannabis
+  \item \textbf{Productivity gap}: Local kif $\approx$ 15 kg/ha $\to$ Modern hybrids $\approx$ 70 kg/ha
+  \item \textbf{This 4-5× increase} explains rapid farmer adoption of hybrid varieties
+  \item \textbf{Actual cultivated area} $>>$ officially authorized area (gap persists post-2021)
+\end{itemize}
+
+\textbf{Conclusion}: International demand, not legalization, is the primary driver
+\end{frame}
+
+% Slide 4: Study Area - Bab Berred
+\begin{frame}
+\frametitle{Study Area: Bab Berred Commune}
+\begin{columns}[T]
+  \column{0.5\textwidth}
+  \textbf{Geographic profile:}
+  \begin{itemize}
+    \item Location: Chefchaouen Province, Central Rif
+    \item Area: 17,224 hectares (172.24 km²)
+    \item Altitude: 650-2,100 m
+    \item Population: 24,742 residents
+    \item Slope: 80% average gradient (mountainous)
+  \end{itemize}
+
+  \column{0.5\textwidth}
+  \textbf{Climatic context:}
+  \begin{itemize}
+    \item Mean annual precipitation: $>$ 700 mm
+    \item Concentration: Winter (Oct-Apr)
+    \item Summer: Hot, dry (May-Sept)
+    \item Mean annual temperature: 18.6°C
+    \item June mean: 24.6°C
+  \end{itemize}
+\end{columns}
+
+\begin{center}
+  \small{\textit{Figure 1: Location and topography of Bab Berred}}
+\end{center}
+\end{frame}
+
+% Slide 5: Basin Proliferation - The Numbers
+\begin{frame}
+\frametitle{Results: Artificial Basin Explosion in Bab Berred}
+
+\textbf{Basin inventory (2010-2025):}
+\begin{itemize}
+  \item 2010: $\approx$ 28 basins
+  \item 2025: 2,044 basins
+  \item Overall density: 11.87 basins/km² (mean spacing: $\approx$ 290 m)
+  \item Growth pattern: Gradual (2010-2014), then accelerating (2015+)
+  \item 2024-2025 alone: 372 new basins
+\end{itemize}
+
+\textbf{Storage capacity transformation:}
+\begin{itemize}
+  \item 2010: $\approx$ 50,000 m³ total
+  \item 2025: $\approx$ 4.3 million m³ total
+  \item Increase: 85-fold expansion in 15 years
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figure 2: Basin evolution curve (2010-2025)}}
+\end{center}
+\end{frame}
+
+% Slide 6: Basin Characteristics - Miniaturization Pattern
+\begin{frame}
+\frametitle{Results: Basin Morphometrics and Miniaturization}
+
+\textbf{Size trend:}
+\begin{itemize}
+  \item 2010 mean basin: 1,260 m²
+  \item 2025 mean basin: 812 m²
+  \item 2025: 90\% of basins $<$ 1,500 m²
+\end{itemize}
+
+\textbf{Depth and volume:}
+\begin{itemize}
+  \item Mean depth: 5.5 m
+  \item Mean storage volume per basin: $\approx$ 2,100 m³
+  \item Pattern: Multiple small reservoirs (economically constrained) rather than fewer large structures
+\end{itemize}
+
+\textbf{Interpretation:}
+\begin{itemize}
+  \item Reflects resource constraints of rural communities
+  \item Incremental infrastructure investment
+  \item Pragmatic adaptation to limited capital
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figure 3: Basin size distribution over time}}
+\end{center}
+\end{frame}
+
+% Slide 7: Spatial Distribution Factors
+\begin{frame}
+\frametitle{Results: Where Are Basins Located?}
+
+\textbf{Altitude control:}
+\begin{itemize}
+  \item Concentration: 800-1,500 m elevation
+  \item Reflects balance between water demand and source proximity
+\end{itemize}
+
+\textbf{Slope preference:}
+\begin{itemize}
+  \item 71\% of basins on slopes 5-15\%
+  \item Virtually absent on slopes $>$ 25\%
+  \item Reflects engineering constraints
+\end{itemize}
+
+\textbf{Land-use distribution:}
+\begin{itemize}
+  \item 78\% within cultivated lands
+  \item 18\% in grasslands
+  \item Only 3\% in natural vegetation
+  \item Shows deliberate agricultural intensification + land conversion
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figures 4-5: Maps of altitude, slope, and land-use distribution}}
+\end{center}
+\end{frame}
+
+% Slide 8: Precipitation Decline
+\begin{frame}
+\frametitle{The Paradox Part 1: Declining Precipitation (1985-2025)}
+
+\textbf{Long-term trend:}
+\begin{itemize}
+  \item Progressive decline in annual precipitation over 40 years
+  \item Mann-Kendall test: tau = -0.1376 (significant negative trend, p $<$ 0.05)
+  \item High interannual variability masks overall decline
+\end{itemize}
+
+\textbf{Extreme variability:}
+\begin{itemize}
+  \item Wet years: 1996, 2010, 2018 ($>$ 850 mm)
+  \item Dry years: 1995, 1998, 2005, 2015, 2020 ($<$ 410 mm)
+  \item Extreme: 2023 record low at $\approx$ 300 mm
+\end{itemize}
+
+\textbf{Agricultural consequence:}
+\begin{itemize}
+  \item Increasing hydrological pressure on rainfed agriculture
+  \item Motivation for artificial water storage as drought mitigation
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figure 6: Precipitation time series and trend (1985-2025)}}
+\end{center}
+\end{frame}
+
+% Slide 9: NDVI Paradox
+\begin{frame}
+\frametitle{The Paradox Part 2: Vegetation Improvement Despite Drought}
+
+\textbf{NDVI analysis (March-July, 1998-2025):}
+\begin{itemize}
+  \item 1998-2012: Slight increase (Sen's slope 0.0025 per year)
+  \item 2012 onward: Pronounced acceleration
+  \item Homogeneity break detected 2012 (p = 0.00000434, tau = 0.501)
+  \item Peak amplitudes: Highest during cannabis growing season (May-Aug)
+\end{itemize}
+
+\textbf{The paradox:}
+\begin{itemize}
+  \item Precipitation is declining overall
+  \item NDVI is improving strongly
+  \item Timing: Both shifts occur around 2012-2013
+  \item Conclusion: Irrigation infrastructure compensates for natural water deficit
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figure 7a: NDVI trends (1998-2025)}}
+\end{center}
+\end{frame}
+
+% Slide 10: What NDVI Really Shows
+\begin{frame}
+\frametitle{The Deception: What NDVI Improvement Really Represents}
+
+\textbf{What NDVI indicates:}
+\begin{itemize}
+  \item Enhanced biomass productivity
+  \item NOT ecosystem health or biodiversity improvement
+\end{itemize}
+
+\textbf{The truth behind the signal:}
+\begin{itemize}
+  \item NDVI improvement derives from irrigated cannabis monoculture
+  \item Cannabis NDVI values $>$ 0.75 (among highest globally)
+  \item Peak growth March-July aligns exactly with measurement period
+  \item High biomass signal masks ecological degradation
+\end{itemize}
+
+\textbf{What actually happened:}
+\begin{itemize}
+  \item Natural areas (grassland, rangeland) $\to$ declined
+  \item Cultivated agricultural area $\to$ expanded
+  \item Land-use transformation: Natural ecosystems $\to$ intensive cannabis
+  \item NOT ecosystem-wide improvement; ecosystem conversion!
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figure 8: Land-use change map comparison}}
+\end{center}
+\end{frame}
+
+% Slide 11: Hydrological Sustainability Crisis
+\begin{frame}
+\frametitle{The Critical Concern: Aquifer Overexploitation}
+
+\textbf{The hydrological crisis:}
+\begin{itemize}
+  \item Water extraction $>$ annual renewable recharge capacity
+  \item Progressive piezometric (water table) decline occurring
+  \item Threatens long-term water security
+\end{itemize}
+
+\textbf{Why this matters:}
+\begin{itemize}
+  \item Incompatible with hydrological system recovery
+  \item Precipitation deficits intensifying with climate change
+  \item Cumulative impacts of 2,000+ small reservoirs create complex pressure
+  \item May trigger unintended ecosystem consequences
+\end{itemize}
+
+\textbf{The paradox of adaptation:}
+\begin{itemize}
+  \item Infrastructure enables short-term productivity
+  \item But may cause long-term water insecurity
+  \item Rational individual decisions (basin construction) lead to collectively unsustainable outcome (aquifer depletion)
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figure 9: Aquifer piezometry decline (conceptual)}}
+\end{center}
+\end{frame}
+
+% Slide 12: Ecological Consequences
+\begin{frame}
+\frametitle{Beyond Hydrology: Landscape Fragmentation and Biodiversity Loss}
+
+\textbf{Landscape fragmentation:}
+\begin{itemize}
+  \item Natural spaces increasingly fragmented by basin infrastructure
+  \item Cannabis cultivation expanding through grasslands
+  \item Disrupts wildlife habitat connectivity
+  \item Threatens endemic Mediterranean species in restricted refugia
+\end{itemize}
+
+\textbf{Biodiversity threat in Rif Mountains:}
+\begin{itemize}
+  \item Rif harbors important endemic plant species
+  \item Several species in restricted refugia within/adjacent to Bab Berred
+  \item Habitat fragmentation directly threatens species persistence
+  \item Ecosystem functionality compromised
+\end{itemize}
+
+\textbf{Ecological summary:}
+\begin{itemize}
+  \item Apparent NDVI improvement masks simultaneous ecological deterioration
+  \item Natural area regression + cultivated area expansion
+  \item Remote sensing alone insufficient for sustainability assessment
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figure 10: Landscape transformation 2006 vs 2023}}
+\end{center}
+\end{frame}
+
+% Slide 13: Governance Implications
+\begin{frame}
+\frametitle{Governance and Sustainable Futures}
+
+\textbf{The current problem:}
+\begin{itemize}
+  \item Absence of coordinated management
+  \item Individual cultivators optimize household advantage
+  \item Individually rational $\neq$ collectively sustainable
+  \item Results: Aquifer depletion, landscape fragmentation, biodiversity loss
+\end{itemize}
+
+\textbf{Necessary reforms:}
+\begin{itemize}
+  \item Hydrological assessments imposing sustainable extraction ceilings
+  \item Protection of natural habitats
+  \item Agricultural diversification
+  \item Improved water efficiency technologies
+  \item Land-use planning integrating conservation with agriculture
+\end{itemize}
+
+\textbf{Role of remote sensing:}
+\begin{itemize}
+  \item NDVI alone suggests environmental improvement
+  \item Integrated analysis (NDVI + precipitation + land-use) reveals true challenges
+  \item Essential for evidence-based governance
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Applies globally to similar Mediterranean regions}}
+\end{center}
+\end{frame}
+
+% Slide 14: Conclusion
+\begin{frame}
+\frametitle{Conclusion: Rural Adaptation and Global Relevance}
+
+\textbf{What we found:}
+\begin{itemize}
+  \item Rapid artificial basin proliferation (28 $\to$ 2,044 in 15 years)
+  \item Infrastructure compensates for declining precipitation
+  \item Apparent vegetation improvement masks ecological degradation
+  \item Aquifer overexploitation threatens long-term sustainability
+\end{itemize}
+
+\textbf{Why it matters beyond Bab Berred:}
+\begin{itemize}
+  \item Pattern replicated across Mediterranean and semi-arid regions globally
+  \item Infrastructure-intensive agricultural transformation widespread
+  \item Remote sensing-based monitoring often misses underlying ecological decline
+  \item Governance frameworks must transcend infrastructure investment alone
+\end{itemize}
+
+\textbf{Path forward:}
+\begin{itemize}
+  \item Sustainable rural futures require integrated governance
+  \item Simultaneous attention to: hydrological limits, ecosystem integrity, livelihood resilience
+  \item Particularly urgent as climate change intensifies water scarcity
+\end{itemize}
+
+\end{frame}
+
+% Final Slide
+\begin{frame}[plain]
+\begin{center}
+  \vfill
+  {\Huge \textbf{Thank you for your attention}}
+  \\[1cm]
+  {\Large Questions?}
+  \\[2cm]
+  \small{
+    Ousmane Samba MAÏGA, Imane Aouassar, et al. \\
+    Mohammed-V University in Rabat \\
+    Faculty of Sciences, Laboratory of Botany, Mycology and Environment
+  }
+  \vfill
+\end{center}
+\end{frame}
+
+\end{document}
