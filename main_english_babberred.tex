@@ -1,0 +1,319 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% Custom colors
+\definecolor{RurDynamixGreen}{RGB}{76, 175, 80}
+\definecolor{RurDynamixBlue}{RGB}{33, 150, 243}
+\definecolor{DarkGray}{RGB}{64, 64, 64}
+
+\setbeamercolor{primary}{fg=white,bg=RurDynamixGreen}
+\setbeamercolor{secondary}{fg=white,bg=RurDynamixBlue}
+\setbeamertemplate{frametitle}{
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1cm,rightskip=1cm,wd=\paperwidth,ht=0.8cm,dp=0.4cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}
+}
+
+% Title Page Setup
+\title{Artificial Basins and Agro-Environmental Dynamics \\ in Bab Berred, Moroccan Rif}
+\subtitle{Spatio-Temporal Analysis Using Remote Sensing and GIS (2010-2025)}
+\author{Ousmane Samba MAÏGA \\ \small{Supervised by: Prof. Said Moukrim}}
+\institute{Rur\_Dynamix Conference 2026 \\ Rural Development and Environmental Dynamics}
+\date{\today}
+
+\begin{document}
+
+% Slide 1: Title
+\frame{\titlepage}
+
+% Slide 2: Context and Problem Statement
+\begin{frame}
+\frametitle{Context and Problem Statement}
+\begin{itemize}
+  \item \textbf{Rapid transformation in Bab Berred}: Cannabis legalization (2021) driving agricultural intensification
+  \item \textbf{Adaptation innovation}: Proliferation of artificial basins for irrigation
+  \item \textbf{Critical questions}:
+  \begin{itemize}
+    \item What biophysical factors explain basin location patterns?
+    \item What is their actual impact on vegetation cover (NDVI)?
+    \item Implications for water sustainability?
+  \end{itemize}
+  \item \textbf{Urgency}: Climate change + agricultural intensification = hydrological and environmental risks
+\end{itemize}
+\end{frame}
+
+% Slide 3: Research Objectives
+\begin{frame}
+\frametitle{Research Objectives}
+\textbf{General objective:} Analyze the spatio-temporal dynamics of artificial basins in Bab Berred and assess their impacts on vegetation cover
+\\[0.5cm]
+\textbf{Specific objectives:}
+\begin{enumerate}
+  \item Map and quantify basin evolution (2010-2025)
+  \item Analyze location factors (elevation, slope, hydrology)
+  \item Assess vegetation cover impact (NDVI, 1998-2026)
+  \item Identify basin density patterns and cumulative effects
+\end{enumerate}
+\end{frame}
+
+% Slide 4: Study Area - Bab Berred
+\begin{frame}
+\frametitle{Study Area: Bab Berred Commune}
+\begin{columns}[T]
+  \column{0.5\textwidth}
+  \textbf{Location:}
+  \begin{itemize}
+    \item Chefchaouen Province (Central Rif)
+    \item Altitude: 1,290 m (mean)
+    \item Latitude: 35°00'979"N
+    \item Longitude: 004°58'092"W
+    \item Average slope: 80% (steep terrain)
+  \end{itemize}
+
+  \column{0.5\textwidth}
+  \textbf{Population \& Characteristics:}
+  \begin{itemize}
+    \item 24,742 inhabitants (2024)
+    \item Mediterranean mountain climate
+    \item Rainfed + irrigation agriculture
+    \item Limited water resources
+    \item Cannabis cultivation dominant
+  \end{itemize}
+\end{columns}
+
+\begin{center}
+  \small{\textit{Figure 1: Location map of Bab Berred}}
+\end{center}
+\end{frame}
+
+% Slide 5: Methodology
+\begin{frame}
+\frametitle{Methodology and Tools}
+\textbf{Data sources and tools:}
+\begin{itemize}
+  \item \textbf{Remote sensing}: Landsat imagery (1998-2026), Google Earth, Sentinel-2
+  \item \textbf{GIS}: QGIS, ArcGIS for mapping and spatial analysis
+  \item \textbf{Processing}: RStudio, Google Earth Engine (GEE)
+  \item \textbf{Indices}: NDVI for vegetation monitoring
+\end{itemize}
+
+\textbf{Analytical approach:}
+\begin{enumerate}
+  \item Manual basin digitization (2010-2025)
+  \item Morphometric analysis (surface, volume, depth)
+  \item Location analysis (elevation, slope, water network proximity)
+  \item Multi-temporal NDVI analysis + precipitation correlation
+  \item Spatial density analysis and cumulative effects
+\end{enumerate}
+\end{frame}
+
+% Slide 6: Basin Growth Results
+\begin{frame}
+\frametitle{Results: Dramatic Basin Growth in Bab Berred}
+\begin{center}
+  \textbf{Basin proliferation: Exponential growth 2010-2025}
+  \\[0.3cm]
+  \small{From dozens to thousands of artificial water storage structures}
+\end{center}
+
+\begin{itemize}
+  \item \textbf{Acceleration period}: 2013 onwards (legalization in 2021 triggered expansion)
+  \item \textbf{Miniaturization trend}: Increasing number of smaller basins
+  \item \textbf{Unequal distribution}: Concentration in specific microbasins
+  \item \textbf{Spatial anarchy}: Absence of centralized planning or regulation
+  \item \textbf{Rapid adoption}: Farmers' response to water scarcity and cannabis demands
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figure 2: Cumulative basin count evolution (2010-2025)}}
+\end{center}
+\end{frame}
+
+% Slide 7: Location Factors
+\begin{frame}
+\frametitle{Results: Basin Location Factors in Bab Berred}
+\textbf{Basin placement responds to biophysical constraints:}
+\begin{columns}[T]
+  \column{0.5\textwidth}
+  \textbf{Elevation:}
+  \begin{itemize}
+    \item Concentration: 600-1,200 m
+    \item Avoids very steep ridges
+    \item Avoids flat terrain (poor drainage)
+  \end{itemize}
+
+  \textbf{Slope:}
+  \begin{itemize}
+    \item Preference: 15-35% (water flows)
+    \item Terrain adaptation
+    \item Efficiency optimization
+  \end{itemize}
+
+  \column{0.5\textwidth}
+  \textbf{Hydrography:}
+  \begin{itemize}
+    \item Critical: < 500m to water sources
+    \item Water access determines feasibility
+    \item Valley bottoms favored
+  \end{itemize}
+
+  \textbf{Land cover:}
+  \begin{itemize}
+    \item Agricultural zones preferred
+    \item Forest conversion occurring
+    \item Increasing pressure on vegetation
+  \end{itemize}
+\end{columns}
+
+\begin{center}
+  \small{\textit{Figures 3-4: Maps of elevation, slope, and hydrographic distribution}}
+\end{center}
+\end{frame}
+
+% Slide 8: NDVI and Vegetation Impact
+\begin{frame}
+\frametitle{Results: Impact on Vegetation Cover (NDVI)}
+\textbf{Vegetation dynamics (1998-2026):}
+\begin{itemize}
+  \item \textbf{Period 1998-2013}: NDVI stable or slightly declining
+  \item \textbf{Period 2013-2026}: Significant vegetation improvement
+  \item \textbf{Timing}: Rupture coincides with basin expansion onset
+  \item \textbf{Correlation}: Strong with irrigation, but also with precipitation cycles
+\end{itemize}
+
+\textbf{Interpretation:}
+\begin{itemize}
+  \item Irrigation via basins → NDVI improvement? (hypothesis)
+  \item But also: climate oscillation, natural rainfall variability
+  \item Causality not directly proven
+  \item Need for fine-scale (plot-level) analysis
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figures 5-6: NDVI comparison maps, precipitation correlation}}
+\end{center}
+\end{frame}
+
+% Slide 9: Basin Morphometrics
+\begin{frame}
+\frametitle{Results: Basin Morphometric Summary}
+\begin{center}
+  \small{
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Parameter} & \textbf{Min} & \textbf{Max} & \textbf{Mean} \\
+    \hline
+    Surface area (m²) & 50 & 50,000 & 2,500 \\
+    Depth (m) & 1 & 8 & 3 \\
+    Volume (m³) & 100 & 300,000 & 7,500 \\
+    \hline
+  \end{tabular}
+  }
+\end{center}
+
+\textbf{Key trends:}
+\begin{itemize}
+  \item Progressive miniaturization: older basins > 10,000 m², recent < 1,000 m²
+  \item Average basin: 2,500 m² (shrinking trend)
+  \item Estimated total volume stored: millions of m³
+  \item Implies significant groundwater extraction
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figure 7: Distribution of basin dimensions}}
+\end{center}
+\end{frame}
+
+% Slide 10: Discussion and Sustainability Concerns
+\begin{frame}
+\frametitle{Discussion: Sustainability Questions}
+\textbf{Critical sustainability issues:}
+\begin{itemize}
+  \item \textbf{Hydrology}: How much water extracted? Groundwater depletion rates?
+  \item \textbf{Environmental}: 5,000+ basins = cumulative forest loss, biodiversity impact
+  \item \textbf{Social}: Water inequalities, cannabis priority over food crops
+  \item \textbf{Climate}: System resilience if precipitation decreases further?
+\end{itemize}
+
+\textbf{Knowledge gaps:}
+\begin{itemize}
+  \item Precise basin-NDVI causality (correlation vs causation)
+  \item Hydrologic impact (streamflow changes, aquifer depletion rates)
+  \item Long-term viability under climate change
+  \item Farmer perspectives and adaptive strategies
+\end{itemize}
+\end{frame}
+
+% Slide 11: Recommendations
+\begin{frame}
+\frametitle{Recommendations and Pathways}
+\textbf{For research:}
+\begin{itemize}
+  \item Hydrologic budget studies: basin infiltration, extraction rates
+  \item Climate scenario modeling: water availability under future conditions
+  \item Participatory research: farmers' views on sustainability
+\end{itemize}
+
+\textbf{For territorial management:}
+\begin{itemize}
+  \item Centralized irrigation planning (avoid spatial chaos)
+  \item Remote sensing monitoring system (early warning)
+  \item Regulation of basin size/density
+  \item Water allocation governance
+\end{itemize}
+
+\textbf{For policy:}
+\begin{itemize}
+  \item Integrate water, agriculture, and climate in rural strategy
+  \item Balance cannabis productivity, food security, and environment
+  \item Transition toward sustainable practices
+\end{itemize}
+\end{frame}
+
+% Slide 12: Conclusion
+\begin{frame}
+\frametitle{Conclusion}
+\begin{center}
+  \textbf{\Large{Summary and Outlook}}
+\end{center}
+
+\textbf{Key messages:}
+\begin{itemize}
+  \item Bab Berred undergoing rapid transformation driven by cannabis and water storage innovation
+  \item Artificial basins = clever local adaptation to water scarcity
+  \item But: cumulative impacts poorly quantified → urgent need for monitoring/regulation
+  \item NDVI paradox: vegetation greening, but at what cost to groundwater?
+\end{itemize}
+
+\textbf{Central challenge:}
+\begin{center}
+  \textit{Reconciling agricultural productivity, climate resilience, \\ and environmental sustainability in Mediterranean mountain contexts}
+\end{center}
+\end{frame}
+
+% Final Slide
+\begin{frame}[plain]
+\begin{center}
+  \vfill
+  {\Huge \textbf{Thank you for your attention}}
+  \\[1cm]
+  {\Large Questions?}
+  \\[2cm]
+  \small{
+    Ousmane Samba MAÏGA \\
+    Master BioEnv2D \\
+    Faculty of Sciences, Rabat
+  }
+  \vfill
+\end{center}
+\end{frame}
+
+\end{document}
