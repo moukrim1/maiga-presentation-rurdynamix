@@ -1,0 +1,308 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage[utf-8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% Custom colors
+\definecolor{RurDynamixGreen}{RGB}{76, 175, 80}
+\definecolor{RurDynamixBlue}{RGB}{33, 150, 243}
+\definecolor{DarkGray}{RGB}{64, 64, 64}
+
+\setbeamercolor{primary}{fg=white,bg=RurDynamixGreen}
+\setbeamercolor{secondary}{fg=white,bg=RurDynamixBlue}
+\setbeamertemplate{frametitle}{
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1cm,rightskip=1cm,wd=\paperwidth,ht=0.8cm,dp=0.4cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}
+}
+
+% Title Page Setup
+\title{Bassins artificiels et dynamiques agro-environnementales \\ dans le Rif marocain}
+\subtitle{Analyse spatio-temporelle par télédétection et SIG (2010-2025)}
+\author{Ousmane Samba MAÏGA \\ \small{Sous la direction de : Prof. Said Moukrim}}
+\institute{Rur\_Dynamix Conference 2026 \\ Rural Development and Environmental Dynamics}
+\date{\today}
+
+\begin{document}
+
+% Slide 1: Title
+\frame{\titlepage}
+
+% Slide 2: Contexte et Problématique
+\begin{frame}
+\frametitle{Contexte et Problématique}
+\begin{itemize}
+  \item \textbf{Transformation rapide du Rif central} : Expansion massive de la culture du cannabis depuis la légalisation (2021)
+  \item \textbf{Innovations d'adaptation} : Prolifération de bassins artificiels pour l'irrigation (25 → 5,139 bassins, 2010-2025)
+  \item \textbf{Questions critiques} :
+  \begin{itemize}
+    \item Quels facteurs biophysiques expliquent l'implantation des bassins ?
+    \item Quel est leur impact réel sur le couvert végétal (NDVI) ?
+    \item Quelles implications pour la durabilité ?
+  \end{itemize}
+  \item \textbf{Urgence} : Changement climatique + intensification agricole → Risques hydriques et environnementaux
+\end{itemize}
+\end{frame}
+
+% Slide 3: Objectifs de l'étude
+\begin{frame}
+\frametitle{Objectifs de l'étude}
+\textbf{Objectif général :} Analyser la dynamique spatio-temporelle des bassins artificiels dans le Rif et évaluer leurs impacts sur le couvert végétal
+\\[0.5cm]
+\textbf{Objectifs spécifiques :}
+\begin{enumerate}
+  \item Cartographier et quantifier l'évolution des bassins (2010-2025)
+  \item Analyser les facteurs de localisation (altitude, pente, hydrographie)
+  \item Évaluer l'impact sur le couvert végétal (NDVI, 1998-2026)
+  \item Identifier les patterns de densité des bassins et leurs effets
+\end{enumerate}
+\end{frame}
+
+% Slide 4: Zone d'étude
+\begin{frame}
+\frametitle{Zone d'étude}
+\begin{columns}[T]
+  \column{0.5\textwidth}
+  \textbf{Localisation :}
+  \begin{itemize}
+    \item Province de Chefchaouen (Rif central)
+    \item Communes : Bab Berred, Bni Darkoul, Bni Salah, Oued Malha
+    \item Altitude : 300-2,000 m
+    \item Relief montagneux, pentes fortes
+  \end{itemize}
+
+  \column{0.5\textwidth}
+  \textbf{Caractéristiques :}
+  \begin{itemize}
+    \item Climat : Semi-aride à subhumide
+    \item Agriculture intensive (cannabis légal)
+    \item Ressources hydriques limitées
+    \item Écosystème fragile en Méditerranée
+  \end{itemize}
+\end{columns}
+
+\begin{center}
+  \small{\textit{Figure 1 : Carte de localisation}}
+\end{center}
+\end{frame}
+
+% Slide 5: Méthodologie
+\begin{frame}
+\frametitle{Méthodologie}
+\textbf{Données et outils :}
+\begin{itemize}
+  \item \textbf{Télédétection :} Images Landsat (1998-2026), Google Earth, Sentinel-2
+  \item \textbf{SIG :} QGIS, ArcGIS pour cartographie et analyse spatiale
+  \item \textbf{Traitement :} RStudio, Google Earth Engine (GEE)
+  \item \textbf{Indices :} NDVI pour suivi du couvert végétal
+\end{itemize}
+
+\textbf{Approche analytique :}
+\begin{enumerate}
+  \item Digitalisation manuelle des bassins (2010-2025)
+  \item Analyse morphométrique (surface, volume, profondeur)
+  \item Analyse de localisation (altitude, pente, proximité réseau hydro)
+  \item Suivi NDVI multi-temporel + corrélation précipitations
+  \item Analyse de densité et effets spatiaux
+\end{enumerate}
+\end{frame}
+
+% Slide 6: Résultats - Dynamique des bassins
+\begin{frame}
+\frametitle{Résultats - Explosion du nombre de bassins}
+\begin{center}
+  \textbf{Croissance exceptionnelle : 25 → 5,139 bassins (2010-2025)}
+  \\[0.3cm]
+  \small{Augmentation de plus de 20,000\%}
+\end{center}
+
+\begin{itemize}
+  \item \textbf{Période d'accélération} : 2013-2025 (légalisation du cannabis, 2021)
+  \item \textbf{Miniaturisation} : Bassins de plus en plus petits et nombreux
+  \item \textbf{Distribution inégale} : Concentration dans communes spécifiques
+  \item \textbf{Anarchie spatiale} : Absence de planification centralisée
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figure 2 : Évolution du nombre cumulé de bassins (2010-2025)}}
+\end{center}
+\end{frame}
+
+% Slide 7: Résultats - Facteurs de localisation
+\begin{frame}
+\frametitle{Résultats - Facteurs de localisation}
+\textbf{L'implantation répond à des contraintes biophysiques :}
+\begin{columns}[T]
+  \column{0.5\textwidth}
+  \textbf{Altitude} :
+  \begin{itemize}
+    \item Concentration 600-1,200 m
+    \item Évite zones très élevées
+  \end{itemize}
+
+  \textbf{Pente} :
+  \begin{itemize}
+    \item Préférence : 15-35\% (eau coule)
+    \item Adaptation au relief
+  \end{itemize}
+
+  \column{0.5\textwidth}
+  \textbf{Réseau hydrographique} :
+  \begin{itemize}
+    \item Proximité critique (< 500m)
+    \item Accès à l'eau déterminant
+  \end{itemize}
+
+  \textbf{Occupation du sol} :
+  \begin{itemize}
+    \item Préférence : zones agricoles
+    \item Conversion de forêt
+  \end{itemize}
+\end{columns}
+
+\begin{center}
+  \small{\textit{Figures 3-4 : Cartes de répartition par altitude, pente, hydrographie}}
+\end{center}
+\end{frame}
+
+% Slide 8: Résultats - Impact sur NDVI
+\begin{frame}
+\frametitle{Résultats - Impact sur le couvert végétal (NDVI)}
+\textbf{Paradoxe détecté (1998-2026) :}
+\begin{itemize}
+  \item \textbf{Période 1998-2013} : NDVI stable/légèrement décroissant
+  \item \textbf{Période 2013-2026} : Amélioration significative du couvert végétal
+  \item \textbf{Rupture} : 2013 coïncide avec essor des bassins
+  \item \textbf{Corrélation} : Forte avec irrigation (bassins ?) mais aussi avec précipitations
+\end{itemize}
+
+\textbf{Interprétation :}
+\begin{itemize}
+  \item Irrigation via bassins → amélioration du NDVI ?
+  \item Mais aussi : évolution climatique, cycle de précipitations
+  \item Pas de causalité directement établie
+  \item Besoin d'étude plus fine (parcelle-échelle)
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figures 5-6 : Cartes NDVI comparatif, corrélation précipitations}}
+\end{center}
+\end{frame}
+
+% Slide 9: Résultats - Synthèse quantitative
+\begin{frame}
+\frametitle{Résultats - Synthèse : Morphométrie des bassins}
+\begin{center}
+  \small{
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Paramètre} & \textbf{Min} & \textbf{Max} & \textbf{Moyen} \\
+    \hline
+    Superficie (m²) & 50 & 50,000 & 2,500 \\
+    Profondeur (m) & 1 & 8 & 3 \\
+    Volume (m³) & 100 & 300,000 & 7,500 \\
+    \hline
+  \end{tabular}
+  }
+\end{center}
+
+\textbf{Tendances :}
+\begin{itemize}
+  \item Miniaturisation progressive des bassins
+  \item Bassin moyen : 2,500 m² (récemment < 1,000 m²)
+  \item Volume total estimé : ~38 millions m³ (toute zone)
+\end{itemize}
+
+\begin{center}
+  \small{\textit{Figure 7 : Distribution de superficie/volume/profondeur}}
+\end{center}
+\end{frame}
+
+% Slide 10: Discussion et enjeux
+\begin{frame}
+\frametitle{Discussion - Enjeux et défis}
+\textbf{Questions de durabilité :}
+\begin{itemize}
+  \item \textbf{Hydrologie} : Prélèvement excessif ? Dégradation nappes phréatiques ?
+  \item \textbf{Environnemental} : Perte de forêt (5,139 bassins = impact cumulatif)
+  \item \textbf{Social} : Inégalités d'accès à l'eau, conflits (cannabis vs vivrières)
+  \item \textbf{Adaptation} : Efficacité face au climat changeant ? Résilience ?
+\end{itemize}
+
+\textbf{Lacunes de connaissance :}
+\begin{itemize}
+  \item Lien précis NDVI-bassins (causalité vs corrélation)
+  \item Impact hydrologique (débit réseau hydro, infiltration)
+  \item Efficacité énergétique et économique
+\end{itemize}
+\end{frame}
+
+% Slide 11: Recommandations
+\begin{frame}
+\frametitle{Recommandations et perspectives}
+\textbf{Pour la recherche :}
+\begin{itemize}
+  \item Étude hydrologique fine : bilans hydrologiques, débit, prélèvement
+  \item Modélisation : scénarios futurs (climat, cannabis, eau)
+  \item Approches participatives : perception des agriculteurs
+\end{itemize}
+
+\textbf{Pour la gestion territoriale :}
+\begin{itemize}
+  \item Planification centralisée de l'irrigation
+  \item Suivi continu par télédétection (alerte précoce)
+  \item Régulation de la taille/densité des bassins
+  \item Adaptation aux conditions hydriques changeantes
+\end{itemize}
+
+\textbf{Pour la politique :}
+\begin{itemize}
+  \item Intégrer eau et agriculture dans stratégie climatique
+  \item Équilibre cannabis-cultures vivrières-environnement
+\end{itemize}
+\end{frame}
+
+% Slide 12: Conclusion
+\begin{frame}
+\frametitle{Conclusion}
+\begin{center}
+  \textbf{\Large{Synthèse et perspectives}}
+\end{center}
+
+\textbf{Principaux messages :}
+\begin{itemize}
+  \item Le Rif central connaît une transformation rapide pilotée par l'expansion du cannabis et l'innovation hydraulique
+  \item Bassin artificiels = adaptation ingénieuse aux contraintes hydriques locales
+  \item Mais : impacts cumulatifs mal quantifiés → urgence de suivi/régulation
+  \item Paradoxe NDVI → amélioration du couvert ?  Mais au prix de ressources ?
+\end{itemize}
+
+\textbf{Enjeu central :}
+\begin{center}
+  \textit{Concilier productivité agricole, résilience climatique \\ et durabilité environnementale en contexte Méditerranéen}
+\end{center}
+\end{frame}
+
+% Final Slide
+\begin{frame}[plain]
+\begin{center}
+  \vfill
+  {\Huge \textbf{Merci de votre attention}}
+  \\[1cm]
+  {\Large Questions ?}
+  \\[2cm]
+  \small{
+    Ousmane Samba MAÏGA \\
+    Master BioEnv2D \\
+    Faculté des Sciences de Rabat
+  }
+  \vfill
+\end{center}
+\end{frame}
+
+\end{document}
