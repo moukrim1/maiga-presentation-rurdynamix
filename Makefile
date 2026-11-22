@@ -17,6 +17,10 @@ compile-en-v3:
 	xelatex -interaction=nonstopmode -synctex=1 main_english_babberred_v3_simplified.tex
 	xelatex -interaction=nonstopmode -synctex=1 main_english_babberred_v3_simplified.tex
 
+compile-en-v4:
+	xelatex -interaction=nonstopmode -synctex=1 main_english_babberred_v4_scientific.tex
+	xelatex -interaction=nonstopmode -synctex=1 main_english_babberred_v4_scientific.tex
+
 clean:
 	rm -f *.aux *.log *.nav *.out *.snm *.toc *.vrb *.synctex.gz
 
@@ -36,7 +40,11 @@ pdf-en-v3:
 	$(MAKE) compile-en-v3
 	$(MAKE) clean
 
-all: pdf pdf-en pdf-en-v2 pdf-en-v3
+pdf-en-v4:
+	$(MAKE) compile-en-v4
+	$(MAKE) clean
+
+all: pdf pdf-en pdf-en-v2 pdf-en-v3 pdf-en-v4
 
 view:
 	open main.pdf || xdg-open main.pdf
@@ -50,23 +58,31 @@ view-en-v2:
 view-en-v3:
 	open main_english_babberred_v3_simplified.pdf || xdg-open main_english_babberred_v3_simplified.pdf
 
+view-en-v4:
+	open main_english_babberred_v4_scientific.pdf || xdg-open main_english_babberred_v4_scientific.pdf
+
 help:
 	@echo "Available targets:"
 	@echo "  make compile       - Compile French LaTeX to PDF"
 	@echo "  make compile-en    - Compile English v1 LaTeX to PDF"
 	@echo "  make compile-en-v2 - Compile English v2 (corrected) LaTeX to PDF"
 	@echo "  make compile-en-v3 - Compile English v3 (simplified) LaTeX to PDF"
+	@echo "  make compile-en-v4 - Compile English v4 (SCIENTIFIC) LaTeX to PDF"
 	@echo "  make pdf           - Compile French and clean"
 	@echo "  make pdf-en        - Compile English v1 and clean"
 	@echo "  make pdf-en-v2     - Compile English v2 (corrected) and clean"
 	@echo "  make pdf-en-v3     - Compile English v3 (simplified) and clean"
+	@echo "  make pdf-en-v4     - Compile English v4 (SCIENTIFIC) and clean"
 	@echo "  make all           - Compile all versions"
 	@echo "  make clean         - Remove auxiliary files"
 	@echo "  make view          - Open French PDF"
 	@echo "  make view-en       - Open English v1 PDF"
 	@echo "  make view-en-v2    - Open English v2 PDF"
 	@echo "  make view-en-v3    - Open English v3 (simplified) PDF"
+	@echo "  make view-en-v4    - Open English v4 (SCIENTIFIC) PDF"
 	@echo "  make help          - Show this message"
 	@echo ""
-	@echo "RECOMMENDED: use 'make pdf-en-v3' for the BEST version"
-	@echo "             (simplified English with Methods slide)"
+	@echo "RECOMMENDED: use 'make pdf-en-v4' for SCIENTIFIC AUDIENCE"
+	@echo "             (Researchers, scholars, faculty)"
+	@echo "             use 'make pdf-en-v3' for NON-SPECIALIST AUDIENCE"
+	@echo "             (Simplified English)"

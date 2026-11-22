@@ -1,0 +1,448 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% Custom colors
+\definecolor{RurDynamixGreen}{RGB}{76, 175, 80}
+\definecolor{RurDynamixBlue}{RGB}{33, 150, 243}
+\definecolor{DarkGray}{RGB}{64, 64, 64}
+
+\setbeamercolor{primary}{fg=white,bg=RurDynamixGreen}
+\setbeamercolor{secondary}{fg=white,bg=RurDynamixBlue}
+\setbeamertemplate{frametitle}{
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1cm,rightskip=1cm,wd=\paperwidth,ht=0.8cm,dp=0.4cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}
+}
+
+% Title Page Setup
+\title{\tiny{Rural Territories in Transition: Morocco and the Global South}}
+\author{Said Moukrim}
+\institute{UM5-FSR Morocco}
+\date{November 28, 2026}
+
+\begin{document}
+
+\begin{frame}
+
+\begin{columns}[T]
+  \column{0.5\textwidth}
+  \includegraphics[width=\textwidth]{images/rur_dyn.png}
+
+  \column{0.25\textwidth}
+  \includegraphics[width=\textwidth]{images/FSR logo.png}
+\end{columns}
+
+\vspace{1cm}
+
+\begin{center}
+\Large {Hydraulic Innovation and Rural Transitions:}\\
+\vspace{0.8cm}
+\large{Spatio-Temporal Analysis of Artificial Basins Dynamics in Bab Berred}\\
+Central Rif (Morocco)\\
+\vspace{1.5cm}
+\Large{Said Moukrim}
+\end{center}
+
+\end{frame}
+
+% ==================== INTRODUCTION ====================
+
+% Slide 2: Hydrological Context and Infrastructure Response
+\begin{frame}
+\frametitle{Hydrological Deficit and Infrastructure Adaptation}
+
+\textbf{Hydroclimatic constraints in Mediterranean mountain regions:}
+\begin{itemize}
+  \item Increasing precipitation deficit in Rif Mountains
+  \item Pronounced seasonal water stress during dry season
+  \item Agricultural intensification requires reliable water supply
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Infrastructure-based adaptation strategy:}
+\begin{itemize}
+  \item Artificial basin proliferation as drought-mitigation infrastructure
+  \item Water harvesting from surface runoff and groundwater resources
+  \item Storage capacity expansion enabling irrigation during water-scarce periods
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Research question:}
+\begin{itemize}
+  \item Spatio-temporal dynamics and sustainability implications of basin expansion
+  \item Linkages between infrastructure development, land-use change, and ecosystem response
+\end{itemize}
+
+\end{frame}
+
+% Slide 3: Cannabis Cultivation Intensification
+\begin{frame}
+\frametitle{Agricultural Intensification: Hybrid Cannabis Cultivation}
+
+\textbf{Market-driven agricultural transformation:}
+\begin{itemize}
+  \item Introduction of modern hybrid varieties (early 2010s) responding to international demand
+  \item Productivity differential: traditional kif ($\approx$ 15 kg/ha) vs. hybrid varieties ($\approx$ 70 kg/ha)
+  \item Four-to-five-fold yield increase explains rapid farmer adoption
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Hydrological consequence:}
+\begin{itemize}
+  \item Hybrid varieties require substantially greater water availability than traditional cultivation
+  \item Necessitates transition from rainfed to irrigated agriculture
+  \item Driver of artificial basin proliferation as adaptive infrastructure
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Note on legalization context:}
+\begin{itemize}
+  \item Law 13-21 (2021) created regulatory framework; not primary expansion driver
+  \item International market demand, not legalization, shapes cultivation dynamics
+\end{itemize}
+
+\end{frame}
+
+% Slide 4: Study Area and Regional Context
+\begin{frame}
+\frametitle{Study Site: Bab Berred Municipality, Chefchaouen Province}
+
+\textbf{Geographic and climatic characteristics:}
+\begin{itemize}
+  \item Location: Central Rif Mountains, northern Morocco (35°00'N, 4°58'W)
+  \item Area: 172.24 km² encompassing 17,224 hectares
+  \item Topography: Steep terrain (mean slope 80\%), elevation 650-2,100 m
+  \item Population: 24,742 residents dependent on agriculture
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Climate:}
+\begin{itemize}
+  \item Mediterranean mountain climate
+  \item Mean annual precipitation $>$ 700 mm (winter concentration)
+  \item Mean annual temperature: 18.6°C; June mean: 24.6°C
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{center}
+  \vspace{1.2cm}
+  \includegraphics[width=0.7\textwidth]{images/Figure1_Location.png}
+  \small{\textit{Figure 1: Geographic location and topography of Bab Berred}}
+\end{center}
+
+\end{frame}
+
+% ==================== METHODS ====================
+
+% Slide 5: Methodology and Data Sources
+\begin{frame}
+\frametitle{Data Sources and Analytical Methods}
+
+\textbf{Remote sensing data:}
+\begin{itemize}
+  \item Landsat 5, 7, 8 (30-m resolution, 1998-2025) via Google Earth Engine
+  \item Historical imagery: Google Earth Pro, Esri World Imagery Wayback
+  \item NDVI calculation from Landsat surface reflectance
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{Climate data:}
+\begin{itemize}
+  \item Annual precipitation time series (1985-2025) from satellite products
+  \item Trend analysis: Mann-Kendall test for monotonic trends
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{Land-cover classification:}
+\begin{itemize}
+  \item ESA WorldCover 2021 product (seven classes identified in study area)
+  \item Manual basin digitization and morphometric characterization
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{Spatial analysis:}
+\begin{itemize}
+  \item QGIS for vector and raster processing
+  \item Basin spatio-temporal analysis (2010-2025)
+  \item Relationship analysis: basin distribution vs. topographic and land-use variables
+\end{itemize}
+
+\end{frame}
+
+% ==================== RESULTS ====================
+
+% Slide 6: Basin Proliferation Dynamics
+\begin{frame}
+\frametitle{Result 1: Artificial Basin Proliferation (2010-2025)}
+
+\textbf{Basin inventory and growth trajectory:}
+\begin{itemize}
+  \item 2010: $\approx$ 28 basins
+  \item 2025: 2,044 basins
+  \item Overall basin density: 11.87 structures/km²
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Storage capacity expansion:}
+\begin{itemize}
+  \item 2010: $\approx$ 50,000 m³ aggregate volume
+  \item 2025: $\approx$ 4.3 million m³ aggregate volume
+  \item 85-fold increase: Massive hydrological transformation
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Morphometric miniaturization:}
+\begin{itemize}
+  \item Mean basin size 2010: 1,260 m²
+  \item Mean basin size 2025: 812 m²
+  \item 90\% of basins (2025): $<$ 1,500 m²
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{center}
+  \vspace{0.8cm}
+  \includegraphics[width=0.75\textwidth]{images/Figure2_BasinGrowth.png}
+  \small{\textit{Figure 2: Cumulative basin count and temporal growth pattern (2010-2025)}}
+\end{center}
+
+\end{frame}
+
+% Slide 7: Spatial Distribution Analysis
+\begin{frame}
+\frametitle{Result 2: Spatial Distribution and Environmental Controls}
+
+\textbf{Topographic controls on basin location:}
+\begin{itemize}
+  \item Altitude preference: 800-1,500 m (optimal balance between water demand and source proximity)
+  \item Slope distribution: 71\% on slopes 5-15\%; absent on slopes $>$ 25\% (engineering constraints)
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Land-use distribution:}
+\begin{itemize}
+  \item 78\% within cultivated agricultural areas
+  \item 18\% in grasslands
+  \item Only 3\% in natural vegetation (minimal ecosystem conversion direct to basins)
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Interpretation:}
+\begin{itemize}
+  \item Basin distribution reflects adaptation to biophysical constraints
+  \item Lacks evidence of centralized planning; indicates individual farmer optimization
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{center}
+  \vspace{0.5cm}
+  \includegraphics[width=0.75\textwidth]{images/Figure3_SpatialDistribution.png}
+  \small{\textit{Figure 3: Basin spatial distribution relative to altitude, slope, and land-use}}
+\end{center}
+
+\end{frame}
+
+% Slide 8: Vegetation Index Evolution
+\begin{frame}
+\frametitle{Result 3: Spatio-Temporal Evolution of Vegetation Index}
+
+\textbf{NDVI$_{\text{March-Jul}}$ temporal dynamics (1998-2025):}
+\begin{itemize}
+  \item 1998-2012: Gradual increase (Sen's slope 0.0025 per year)
+  \item 2012-2025: Marked acceleration in vegetation index values
+  \item Significant homogeneity break detected (2012): $p = 4.34 \times 10^{-6}$; tau = 0.501
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Seasonal pattern:}
+\begin{itemize}
+  \item Peak NDVI amplitudes coincide with cannabis cultivation growing season (May-August)
+  \item Suggests irrigation-enabled vegetation productivity enhancement
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{center}
+  \vspace{0.9cm}
+  \includegraphics[width=0.75\textwidth]{images/Figure4_NDVI.png}
+  \small{\textit{Figure 4: NDVI$_{\text{March-Jul}}$ time series (1998-2025) showing inflection point}}
+\end{center}
+
+\end{frame}
+
+% Slide 9: Precipitation Trend Analysis
+\begin{frame}
+\frametitle{Result 4: Long-Term Precipitation Decline}
+
+\textbf{Annual precipitation trends (1985-2024):}
+\begin{itemize}
+  \item Significant negative trend: Mann-Kendall tau = $-0.1376$, $p < 0.05$
+  \item Progressive decline in annual precipitation over 40-year period
+  \item High interannual variability: Wet years $>$ 850 mm; dry years $<$ 410 mm
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Extreme events:}
+\begin{itemize}
+  \item 2023: Record precipitation low ($\approx$ 300 mm)
+  \item Intensified hydrological pressure on agriculture
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Critical finding:}
+\begin{itemize}
+  \item Divergence between declining precipitation and improved vegetation index
+  \item Demonstrates infrastructure-based compensation for hydroclimatic deficit
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{center}
+  \vspace{0.5cm}
+  \includegraphics[width=0.75\textwidth]{images/Figure5_Precipitation.png}
+  \small{\textit{Figure 5: Annual precipitation time series with Mann-Kendall trend}}
+\end{center}
+
+\end{frame}
+
+% ==================== DISCUSSION ====================
+
+% Slide 10: Vegetation Productivity Paradox and Ecological Reality
+\begin{frame}
+\frametitle{Discussion: Infrastructure-Induced Vegetation Improvement Paradox}
+
+\textbf{Apparent vegetation productivity improvement masked ecological change:}
+\begin{itemize}
+  \item NDVI improvement indicates biomass productivity increase, not ecosystem health
+  \item High NDVI signal ($>$ 0.75) derived from irrigated cannabis monoculture
+  \item Irrigation infrastructure sustains vegetation productivity despite precipitation decline
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Contradictory land-use dynamics:}
+\begin{itemize}
+  \item Natural areas (grassland, rangeland) demonstrating regression
+  \item Cultivated agricultural area expansion
+  \item Ecosystem conversion, not ecosystem recovery
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Hydrological sustainability concern:}
+\begin{itemize}
+  \item Water extraction from basins and aquifer systems exceeds annual groundwater recharge capacity
+  \item Aquifer overexploitation creating piezometric decline
+  \item Long-term water security undermined despite short-term irrigation gains
+\end{itemize}
+
+\end{frame}
+
+% Slide 11: Cumulative Ecosystem and Governance Implications
+\begin{frame}
+\frametitle{Discussion: Landscape Fragmentation and Governance Challenges}
+
+\textbf{Ecosystem and biodiversity impacts:}
+\begin{itemize}
+  \item Landscape fragmentation from basin infrastructure and land-use conversion
+  \item Disruption of wildlife habitat connectivity
+  \item Endemic Mediterranean species persistence threatened
+  \item Cumulative impacts of 2,000+ small reservoirs on local hydrology
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Adaptation paradox:}
+\begin{itemize}
+  \item Short-term: Infrastructure enables agricultural intensification and livelihood stability
+  \item Long-term: Aquifer depletion dynamics create sustainability constraints
+  \item Individual optimization (farmer basin construction) generates collective unsustainability
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Governance framework requirements:}
+\begin{itemize}
+  \item Sustainable extraction ceilings based on hydrological assessment
+  \item Integrated territorial governance addressing water security, ecosystem integrity, livelihood resilience
+  \item Infrastructure investment cannot substitute for comprehensive resource management
+\end{itemize}
+
+\end{frame}
+
+% ==================== CONCLUSION ====================
+
+% Slide 12: Conclusion and Global Implications
+\begin{frame}
+\frametitle{Conclusion: Rural Adaptation and Sustainability Challenges}
+
+\textbf{Key findings:}
+\begin{itemize}
+  \item Spatio-temporal analysis reveals rapid artificial basin proliferation (28 $\to$ 2,044, 2010-2025)
+  \item Infrastructure enables continued agricultural productivity despite declining precipitation
+  \item Apparent vegetation improvement masks ecosystem transformation and aquifer overexploitation
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Regional and global relevance:}
+\begin{itemize}
+  \item Infrastructure-intensive agricultural transformation pattern replicated across Mediterranean and semi-arid regions
+  \item Remote sensing-based environmental monitoring often misidentifies ecological status
+  \item Integrated analysis (NDVI + precipitation + land-use + hydrology) essential for sustainability assessment
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Sustainability imperative:}
+\begin{itemize}
+  \item Sustainable rural futures require simultaneous attention to hydrological limits, ecosystem integrity, and livelihood resilience
+  \item Particularly urgent as climate change intensifies water scarcity pressures
+  \item Governance frameworks must transcend infrastructure investment alone
+\end{itemize}
+
+\end{frame}
+
+% Final Slide
+\begin{frame}[plain]
+\begin{center}
+  \vfill
+  {\Huge \textbf{Thank you}}
+  \\[1cm]
+  {\Large Questions and Discussion}
+  \\[2cm]
+  \small{
+    Said Moukrim, Ousmane Samba MAÏGA, et al. \\
+    Mohammed-V University in Rabat \\
+    Faculty of Sciences, Laboratory of Botany, Mycology and Environment
+  }
+  \vfill
+\end{center}
+\end{frame}
+
+\end{document}
